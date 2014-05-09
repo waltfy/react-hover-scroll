@@ -38,5 +38,3 @@ react-hover-scroll
 
 If you want to use your own configuration class you will have to do something like:
 `React.renderComponent(MyApp({ HS_time: 300, HS_class: 'disable__hover'}), nodeToMount);`
-
-Enjoy.
