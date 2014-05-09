@@ -3,7 +3,7 @@ react-hover-scroll
 
 **React Mixin For Disabling Pointer Events**
 
-[JSBIN Working Example](http://jsbin.com/niyer/13/edit?js,console,output)
+[JSBin Working Example](http://jsbin.com/niyer/13/edit?js,console,output)
 
 # Usage
 
