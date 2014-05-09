@@ -3,6 +3,8 @@ react-hover-scroll
 
 **React Mixin For Disabling Pointer Events**
 
+[JSBIN Working Example](http://jsbin.com/niyer/13/edit?js,console,output)
+
 # Usage
 
 1. Load `react-hover-scroll.js` onto your page. After the `react.js`, but before you own ReactCode code.
@@ -17,7 +19,6 @@ var MyApp = React.createClass({
     var createListItem = function (item, index) {
       return <li className='listItem' key={index}>{item}</li>;
     };
-    
     
     var hoverEnabled = (this.props.HS_active) ? this.props.HS_class : null; // 4.1 set a variable to hold our class name if user is not scrolling
     return (
