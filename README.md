@@ -7,7 +7,7 @@ react-hover-scroll
 
 1. Load `react-hover-scroll.js` onto your page. After the `react.js`, but before you own ReactCode code.
 2. Add the mixin to your root React component: `mixins: [ReactHoverScrollMixin],`.
-3. Find a class name for disabling pointer events (default: `disable-hover`). And add the following code to your css: `.disable-hover { pointer-events: none !important; }` this is what disables the pointer events.
+3. Find a suitable class name for disabling pointer events (default: `disable-hover`). And add the following code to your `CSS`: `.disable-hover { pointer-events: none !important; }` this is what disables the pointer events.
 4. Add the class to the 'root' node of your app (usually first `div` tag), as shown in the example below.
 
 ```
@@ -32,4 +32,11 @@ react-hover-scroll
   });
 ```
 
+# Options
+* `HS_time: 500ms (default)`: This is the time taken to re-enable the hover styles
+* `HS_class: 'disable-hover' (default)`: This is the `CSS` class name used.
 
+If you want to use your own configuration class you will have to do something like:
+`React.renderComponent(MyApp({ HS_time: 300, HS_class: 'disable__hover'}), nodeToMount);`
+
+Enjoy.
