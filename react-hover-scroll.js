@@ -1,4 +1,3 @@
-// react-hover-scroll
 var ReactHoverScrollMixin = {
   displayName: 'ReactHoverScrollMixin',
   propTypes: {
@@ -8,28 +7,23 @@ var ReactHoverScrollMixin = {
   getDefaultProps: function() {
     return {
       HS_time: 500,
-      HS_class: 'disable-hover'
+      HS_active: false
+      HS_class: 'disable-hover',
     };
   },
-  getInitialState: function () {
-    return { scrolling: false };
-  },
-  isScrolling: function () {
-    return this.state.scrolling; 
-  },
   removeHoverEffects: function () {
-    this.setState({ scrolling: true }); // is scrolling
+    this.setProps({ HS_active: true }); // is scrolling
   },
   addHoverEffects: function () {
-    this.setState({ scrolling: false }); // stopped scrolling
+    this.setProps({ HS_active: false }); // stopped scrolling
   },
   componentDidMount: function () {
-        var self = this,
-        timer = null;
+      var self = this,
+      timer = null;
         
     window.addEventListener('scroll', function () {
       clearTimeout(timer);
-      if (!self.state.scrolling) self.removeHoverEffects();
+      if (!self.props.HS_active) self.removeHoverEffects();
       timer = setTimeout(self.addHoverEffects, self.props.HS_time);
     }, false);
   }
