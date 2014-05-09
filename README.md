@@ -11,25 +11,24 @@ react-hover-scroll
 4. Add the class to the 'root' node of your app (usually first `div` tag), as shown in the example below.
 
 ```
-  var MyApp = React.createClass({
-    mixins: [ReactHoverScrollMixin],
-    render: function () {
-      var createListItem = function (item, index) {
-        return <li className='listItem' key={index}>{item}</li>;
-      };
-      
-      
-      var hoverEnabled = (this.props.HS_active) ? this.props.HS_class : null; // 4.1 set a variable to hold our class name if user is not scrolling
-      return (
-        <div className={hoverEnabled}> // 4.2 add the class to the root node
-          <ul>
-            { this.props.list.map(createListItem) }
-          </ul>
-        </div>
-      );
-      
-    }
-  });
+var MyApp = React.createClass({
+  mixins: [ReactHoverScrollMixin],
+  render: function () {
+    var createListItem = function (item, index) {
+      return <li className='listItem' key={index}>{item}</li>;
+    };
+    
+    
+    var hoverEnabled = (this.props.HS_active) ? this.props.HS_class : null; // 4.1 set a variable to hold our class name if user is not scrolling
+    return (
+      <div className={hoverEnabled}> // 4.2 add the class to the root node
+        <ul>
+          { this.props.list.map(createListItem) }
+        </ul>
+      </div>
+    );
+  }
+});
 ```
 
 # Options
